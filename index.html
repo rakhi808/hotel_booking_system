@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+        <h1>Hotel Booking</h1>
+
+        <form id="bookingForm">
+            <label>Name:</label>
+            <input type="text" id="name" required>
+
+            <label>Check-in Date:</label>
+            <input type="date" id="checkin" required>
+
+            <label>Check-out Date:</label>
+            <input type="date" id="checkout" required>
+
+            <label>Room Type:</label>
+            <select id="room">
+                <option value="1000" data-name="Single">Single Room (₹1000)</option>
+                <option value="2000" data-name="Double">Double Room (₹2000)</option>
+                <option value="3000" data-name="Suite">Suite (₹3000)</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+
+        <h2 id="result"></h2>
+
+        <button onclick="clearHistory()">Clear History</button>
+
+        <h3>Booking History</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Room</th>
+                    <th>Days</th>
+                    <th>Total ₹</th>
+                </tr>
+            </thead>
+            <tbody id="history"></tbody>
+        </table>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
